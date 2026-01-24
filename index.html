@@ -111,8 +111,8 @@
             color: var(--logo-cyan);
         }
 
-        .contact-link {display: block; word-break: normal; overflow-wrap: anywhere; color: #fff; text-decoration: none; font-size: 0.9rem;
-            font-family: monospace;}
+        .contact-link {display: inline-block; color: #fff; text-decoration: none; font-size: 0.9rem; font-family: monospace; 
+            transition: color 0.3s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
 
         .tagline { color: var(--text-dim); margin-top: 20px; font-weight: 300; font-size: 1rem; max-width: 650px; margin-left: auto; margin-right: auto; line-height: 1.6; }
         .udyam { font-size: 0.7rem; color: var(--text-dim); margin-top: 12px; font-family: monospace; opacity: 0.5; }
@@ -163,7 +163,7 @@
             .research-row {flex-direction: column;}
             .column-right {flex-direction: column;}  
             .column-left, .column-right {flex: none; width: 100%;}
-            .contact-link {word-break: break-all; font-size: 0.8rem;}
+            .contact-link {word-break: break-all; font-size: 0.8rem; white-space: normal;}
         }
 
         .id-val, .meta, .academic-text { user-select: text !important; -webkit-user-select: text !important; -ms-user-select: text !important;}
@@ -297,7 +297,6 @@
         </div>
     </div>
 
-    
        <div class="section-title" style="justify-content: center;">Contact Laboratory</div>
     <div class="card" style="background: linear-gradient(145deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.9)); border: 1px solid rgba(99, 102, 241, 0.3); padding: 40px 20px;">
         <div style="text-align: center; margin-bottom: 35px;">
@@ -307,7 +306,7 @@
             </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 10px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 10px;">
             
             <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s;" onmouseover="this.style.borderColor='var(--logo-cyan)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'">
                 <span style="font-size: 0.65rem; color: var(--logo-cyan); text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em; display: block; margin-bottom: 8px;">General Inquiry</span>
