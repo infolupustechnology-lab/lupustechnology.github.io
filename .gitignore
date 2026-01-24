@@ -1,0 +1,23 @@
+# --- Private Research Data ---
+# Ignores all Word, PDF, and Text drafts
+*.docx
+*.pdf
+*.txt
+drafts/
+internal_notes/
+
+# --- Local Environment & OS Trash ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Sensitive Credentials ---
+# In case you use local scripts for data scraping or analysis
+.env
+config.json
+*.log
+
+# --- Specific Lab Folders ---
+# You can name a folder 'private' and everything inside will be hidden
+private/
+temp_data/
