@@ -39,6 +39,7 @@
             margin: 0;
             line-height: 1.6;
             user-select: none;
+            -ms-user-select: none;
             -webkit-user-select: none;
         }
 
@@ -163,6 +164,21 @@
 
         .id-val, .meta, .academic-text { user-select: text !important; -webkit-user-select: text !important; }
     </style>
+        <script>
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+    document.addEventListener('keydown', (e) => {
+        if (
+            e.keyCode === 123 || 
+            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+            (e.ctrlKey && e.keyCode === 85) ||
+            (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 80 || e.keyCode === 67))
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
+    document.addEventListener('dragstart', (e) => e.preventDefault());
+</script>
 </head>
 <body>
 
