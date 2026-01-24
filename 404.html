@@ -28,6 +28,9 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
         }
 
         .error-container {
@@ -92,6 +95,21 @@
             box-shadow: 0 15px 25px rgba(99, 102, 241, 0.4);
         }
     </style>
+    <script>
+    document.addEventListener('contextmenu', (e) => e.preventDefault());
+    document.addEventListener('keydown', (e) => {
+        if (
+            e.keyCode === 123 || 
+            (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+            (e.ctrlKey && e.keyCode === 85) ||
+            (e.ctrlKey && (e.keyCode === 83 || e.keyCode === 80 || e.keyCode === 67))
+        ) {
+            e.preventDefault();
+            return false;
+        }
+    });
+    document.addEventListener('dragstart', (e) => e.preventDefault());
+</script>
 </head>
 <body>
 
